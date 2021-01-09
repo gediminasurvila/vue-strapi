@@ -1,7 +1,16 @@
 <template>
   <div>
+    <v-app>
+      <!-- Must have the app property -->
+      <v-app-bar app>
+              <navigation />
+      </v-app-bar>
+      <v-main>
+        Hello World
+      </v-main>
+    </v-app>
     <header>
-      <navigation />
+
       <slot name="header"></slot>
     </header>
     <main>
