@@ -3,25 +3,17 @@
     <v-app>
       <!-- Must have the app property -->
       <v-app-bar app>
-              <navigation />
+        <navigation />
+        <slot name="header"></slot>
       </v-app-bar>
       <v-main>
-        Hello World
+        <v-container>
+          <v-content>
+            <slot></slot>
+          </v-content>
+        </v-container>
       </v-main>
     </v-app>
-    <header>
-
-      <slot name="header"></slot>
-    </header>
-    <main>
-      <slot></slot>
-    </main>
-    <aside>
-      <slot name="aside"></slot>
-    </aside>
-    <footer>
-      <slot name="footer"></slot>
-    </footer>
   </div>
 </template>
 

@@ -1,13 +1,13 @@
 <template>
   <nav>
-    <ul>
-      <li>
-        <router-link to="/">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/blog">Blog</router-link>
-      </li>
-    </ul>
+    <v-container>
+      <v-row align="center" justify="space-around">
+        <router-link to="/" tag="span"><v-btn text>Home</v-btn></router-link>
+        <router-link to="/blog" tag="span"
+          ><v-btn text>Blog</v-btn></router-link
+        >
+      </v-row>
+    </v-container>
   </nav>
 </template>
 

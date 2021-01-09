@@ -4,7 +4,11 @@
       <h1>Blog</h1>
       <!-- <counter /> -->
       <div v-for="post in posts" :key="post.id">
-        <h2><router-link :to="{path: `/blog/${post.slug}`}">{{ post.title }}</router-link></h2>
+        <h2>
+          <router-link :to="{ path: `/blog/${post.slug}` }">{{
+            post.title
+          }}</router-link>
+        </h2>
       </div>
     </div>
   </main-layout>

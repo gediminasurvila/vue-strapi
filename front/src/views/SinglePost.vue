@@ -1,9 +1,9 @@
 <template>
   <main-layout>
     <div v-if="post">
-      <h1>{{post.title}}</h1>
-      <div>{{post.author.firstname}} {{post.author.lastname}}</div>
-      <vue-markdown>{{post.body}}</vue-markdown>
+      <h1>{{ post.title }}</h1>
+      <div>{{ post.author.firstname }} {{ post.author.lastname }}</div>
+      <vue-markdown>{{ post.body }}</vue-markdown>
     </div>
   </main-layout>
 </template>
@@ -14,9 +14,9 @@ import VueMarkdown from 'vue-markdown';
 import { mapActions } from 'vuex';
 
 export default {
-  components: { 
+  components: {
     MainLayout,
-    VueMarkdown
+    VueMarkdown,
   },
   name: 'single-post',
   methods: {

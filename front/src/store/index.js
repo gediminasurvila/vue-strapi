@@ -6,8 +6,8 @@ import counter from './modules/counter';
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-    modules: {
-        blog,
-        counter
-    },
+  modules: {
+    blog,
+    counter,
+  },
 });
