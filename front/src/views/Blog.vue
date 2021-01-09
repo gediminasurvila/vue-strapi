@@ -2,6 +2,7 @@
   <main-layout>
     <div>
       <h1>Blog</h1>
+      <counter />
     </div>
     <template slot="footer">
       <div>Blog</div>
@@ -11,9 +12,13 @@
 
 <script>
 import MainLayout from '../layouts/MainLayout';
+import Counter from '../components/Counter';
 
 export default {
-  components: { MainLayout },
+  components: {
+    MainLayout,
+    Counter,
+  },
   name: 'Blog',
 };
 </script>
