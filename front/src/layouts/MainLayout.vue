@@ -6,13 +6,11 @@
         <navigation />
         <slot name="header"></slot>
       </v-app-bar>
-      <v-main>
-        <v-container>
-          <v-content>
-            <slot></slot>
-          </v-content>
-        </v-container>
-      </v-main>
+      <v-container>
+        <v-main>
+          <slot></slot>
+        </v-main>
+      </v-container>
     </v-app>
   </div>
 </template>

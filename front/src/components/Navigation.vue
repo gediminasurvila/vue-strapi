@@ -6,6 +6,12 @@
         <router-link to="/blog" tag="span"
           ><v-btn text>Blog</v-btn></router-link
         >
+        <router-link to="/sign-up" tag="span"
+          ><v-btn text>Sign up</v-btn></router-link
+        >
+        <router-link to="/login" tag="span"
+          ><v-btn text>Login</v-btn></router-link
+        >
       </v-row>
     </v-container>
   </nav>
