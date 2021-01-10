@@ -72,6 +72,8 @@
 
 <script>
 import MainLayout from '../layouts/MainLayout';
+import { mapActions } from 'vuex';
+
 export default {
   components: { MainLayout },
   name: 'SignUp',
@@ -99,10 +101,18 @@ export default {
     };
   },
   methods: {
+    ...mapActions({
+      register: 'auth/register',
+    }),
     signup() {
       const valid = this.$refs.form.validate();
       if (valid) {
-        console.log('sign up');
+        const payload = {
+          username: this.username,
+          email: this.email,
+          password: this.password,
+        };
+        this.register(payload);
       }
     },
   },

@@ -19,7 +19,7 @@ export default {
   },
   actions: {
     async getPosts(context) {
-      const res = await axios.get('http://localhost:1337/blog-posts');
+      const res = await axios.get(`${process.env.VUE_APP_API_BASE}/blog-posts`);
       context.commit('setPosts', res.data);
     },
     async getPostBySlug(context, payload) {
@@ -29,7 +29,7 @@ export default {
       // find id by slug
       const found = context.state.posts.filter((post) => post.slug === payload);
       const res = await axios.get(
-        `http://localhost:1337/blog-posts/${found[0].id}`
+        `${process.env.VUE_APP_API_BASE}/blog-posts/${found[0].id}`
       );
       context.commit('setUpdateSelected', res.data);
     },

@@ -48,6 +48,8 @@
 
 <script>
 import MainLayout from '../layouts/MainLayout';
+import { mapActions } from 'vuex';
+
 export default {
   components: { MainLayout },
   name: 'Login',
@@ -63,10 +65,17 @@ export default {
     };
   },
   methods: {
+    ...mapActions({
+      signin: 'auth/login',
+    }),
     login() {
       const valid = this.$refs.form.validate();
       if (valid) {
-        console.log('submiting');
+        const payload = {
+          identifier: this.identifier,
+          password: this.password,
+        };
+        this.signin(payload);
       }
     },
   },
